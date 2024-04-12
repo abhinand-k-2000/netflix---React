@@ -1,14 +1,15 @@
-import { useState } from 'react'
+import Body from "./components/Body"
 
-import './App.css'
 
 function App() {
 
   return (
     <>
-      <h1 className='text-3xl font-bold underline shadow-lg'>hello netflix</h1>
+      <Body />
     </>
   )
 }
 
 export default App
+
+
