@@ -1,7 +1,9 @@
 import {auth} from "../utilities/firebase"
 import { useNavigate } from "react-router-dom";
-import { signOut } from "firebase/auth";
+import { signOut, onAuthStateChanged } from "firebase/auth";
 import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import { LOGO } from "../utilities/constants";
 
 const Header = () => {
     const navigate = useNavigate()
@@ -15,10 +17,25 @@ const Header = () => {
             // An error happened.
             console.log(error)
           });
-    }
+    }   
+
+    useEffect(()=> {
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+            // user signed in => always go to the /browse
+              const uid = user.uid;
+              navigate("/browse")
+            } else {
+              // User is signed out => always go to the login
+              navigate("/")
+            }
+          });
+    }, [])
+
+
     return (
         <div className="absolute flex justify-between items-center w-screen z-10 bg-gradient-to-bl from-black">
-            <img className="w-40 " src="https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png"
+            <img className="w-40 " src= {LOGO}
             alt="logo" />
             {
                 location.pathname !== '/' && (

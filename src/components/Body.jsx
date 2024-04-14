@@ -16,7 +16,7 @@ const Body = () => {
     ])
 
     return (
-        <div> 
+        <div className="overflow-y-hidden"> 
             <RouterProvider router={router} />
         </div>
     )
