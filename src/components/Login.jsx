@@ -29,7 +29,6 @@ const Login = () => {
             // Logic for sign up form
             createUserWithEmailAndPassword(auth, email.current.value, password.current.value)
                 .then((userCredential) => {
-                    console.log(".then is here")
                     // Signed up 
                     const user = userCredential.user;
                     updateProfile(user, {
@@ -41,7 +40,6 @@ const Login = () => {
                         // An error occurred
                         // ...
                       });
-                    console.log(user)
                     navigate('/browse');
                 })
                 .catch((error) => {
@@ -56,7 +54,6 @@ const Login = () => {
                 .then((userCredential) => {
                     // Signed in 
                     const user = userCredential.user;
-                    console.log("signed User", user)
                     navigate('/browse');
                 })
                 .catch((error) => {

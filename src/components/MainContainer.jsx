@@ -3,7 +3,6 @@ import VideoBackground from "./VideoBackground";
 import VideoTitle from "./VideoTitle";
 
 const MainContainer = ({movie}) => {
-    console.log("main", movie)
     // const {original_title, overview} = movie
   return (
     <div>
