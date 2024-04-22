@@ -90,7 +90,7 @@ const Login = () => {
                 )}
                
 
-                <input ref={email} className="p-3 my-3 rounded-md w-full bg-slate-500 text-sm bg-opacity-80" type="text" placeholder="Email Address" />
+                <input ref={email}  className="p-3 my-3 rounded-md w-full bg-slate-500 text-sm bg-opacity-80" type="text" placeholder="Email Address" />
                 <input ref={password} className="p-3 my-3 rounded-md w-full bg-slate-500 text-sm bg-opacity-80" type="password" placeholder="Password" />
 
                 <p className="text-red-500 text-center">{errorMessage}</p>
@@ -102,6 +102,7 @@ const Login = () => {
                     {isSignInForm? <span onClick={toggleSignInForm} className="font-bold text-white cursor-pointer">Sign Up now</span>: <span onClick={toggleSignInForm} className="font-bold text-white cursor-pointer">Sign In now</span>}</p>
 
             </form>
+
             
         </div>
     )

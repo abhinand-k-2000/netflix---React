@@ -12,11 +12,12 @@ const Body = () => {
         {
             path: '/browse',
             element: <Browse />
-        }
+        },
+      
     ])
 
     return (
-        <div className="overflow-y-hidden"> 
+        <div className="overflow-hidden"> 
             <RouterProvider router={router} />
         </div>
     )

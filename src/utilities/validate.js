@@ -1,6 +1,6 @@
 
 
-export const validateForm = (email, password, name) =>{
+export const  validateForm = (email, password, name) =>{
 
     const validEmail = /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/.test(email);
     const validPassword = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/.test(password)
@@ -13,4 +13,4 @@ export const validateForm = (email, password, name) =>{
     if(!validPassword) return "Invalid Password"
 
     return null;
-}
+} 

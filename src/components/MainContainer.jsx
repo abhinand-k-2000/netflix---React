@@ -5,7 +5,7 @@ import VideoTitle from "./VideoTitle";
 const MainContainer = ({movie}) => {
     // const {original_title, overview} = movie
   return (
-    <div>
+    <div >
       <VideoTitle movie={movie}/>
       <VideoBackground movie={movie} />
     </div>
